@@ -1,7 +1,18 @@
+/**
+ * @author : Shoukath Mohammed
+ */
 (function() {
+
   'use strict';
 
   angular
-    .module('ngAzaanMeanStack', ['ngAnimate', 'ngSanitize', 'ngAria', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'toastr']);
-
+    .module('AzaanApp', [
+    	  'ngAnimate'
+    	, 'ngSanitize'
+    	, 'ngAria'
+    	, 'ngResource'
+    	, 'ui.router'
+    	, 'mgcrea.ngStrap'
+    	, 'toastr'
+    ]);
 })();

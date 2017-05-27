@@ -1,14 +1,16 @@
+/**
+ * @author : Shoukath Mohammed
+ */
 (function() {
+
   'use strict';
 
   angular
-    .module('ngAzaanMeanStack')
-    .run(runBlock);
+    .module('AzaanApp')
+    .run(run);
 
   /** @ngInject */
-  function runBlock($log) {
-
-    $log.debug('runBlock end');
+  function run($log) {
+    $log.debug('Run block ends!');
   }
-
 })();

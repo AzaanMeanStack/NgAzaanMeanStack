@@ -1,8 +1,12 @@
+/**
+ * @author : Shoukath Mohammed
+ */
 (function() {
+
   'use strict';
 
   angular
-    .module('ngAzaanMeanStack')
+    .module('AzaanApp')
     .config(routerConfig);
 
   /** @ngInject */
@@ -14,7 +18,6 @@
         controller: 'MainController',
         controllerAs: 'main'
       });
-
     $urlRouterProvider.otherwise('/');
   }
 

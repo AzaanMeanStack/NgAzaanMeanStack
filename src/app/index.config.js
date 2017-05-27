@@ -1,8 +1,12 @@
+/**
+ * @author : Shoukath Mohammed
+ */
 (function() {
+
   'use strict';
 
   angular
-    .module('ngAzaanMeanStack')
+    .module('AzaanApp')
     .config(config);
 
   /** @ngInject */
@@ -17,5 +21,4 @@
     toastrConfig.preventDuplicates = true;
     toastrConfig.progressBar = true;
   }
-
 })();
