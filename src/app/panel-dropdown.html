@@ -1,0 +1,11 @@
+<div class="col-sm-4 pull-right select-prayer-hall">
+  <div class="input-group">
+    <span class="input-group-addon">Select Masjid:</span>
+    <select class="form-control" name="OrderBy" 
+        ng-model="option._id"
+        ng-init="option._id = option._id || options[0]._id" 
+        ng-change="loadData(option._id)">
+        <option class="masjid-option" ng-repeat="option in options" value="{{option._id}}" ng-selected="selected">{{option.orgName}}</option>
+    </select>
+  </div>
+</div>

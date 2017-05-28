@@ -1,0 +1,33 @@
+<!-- Add Prayer Time Panel -->
+  <div class="panel panel-default" ng-if="option._id != 'DEFAULT'">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle accordion-anchor collapsed" data-toggle="collapse" onclick="return false;" data-parent="#accordion" href="#panel2">
+            <i class="glyphicon"></i>
+            <span>Add Prayer Time</span>
+        </a>
+       </h4>
+    </div>
+    <div id="panel2" class="panel-collapse collapse">
+      <div class="panel-body panel-update-block">
+        <div class="well update-timings-container">
+          <div class="form-group">
+            <h4>Add Prayer Time</h4>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Salah</label>
+            <input class="form-control" ng-model="prayer.salah" />
+          </div>
+          <div class="form-group">
+            <label class="control-label">Iqama</label>
+            <input type="text" class="form-control time-picker" size="8" ng-model="prayer.iqama" name="time" bs-timepicker>
+          </div>
+          <div class="form-group">
+            <pre class="alert alert-info">{{ prayer.salah ? prayer.salah  + ' salah is at:' : '' }} {{ prayer.iqama ? prayer.iqama : 'N/A' | date:'h:mm a' }}</pre>
+          </div>
+          <button class="btn btn-info" ng-click="addPrayer(prayer)">Add</button>
+          <!-- <button class="btn btn-default" ui-sref="edit">Cancel</button> -->
+        </div>
+      </div>
+    </div>
+  </div>

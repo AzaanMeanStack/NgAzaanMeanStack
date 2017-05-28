@@ -28,6 +28,297 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 }
 
 /**
+ * Custom styling starts here
+ */
+ .azaan-timings-view {
+	color: #fff;
+    background-color: #F9F9F9;
+}
+
+.header-navbar {
+	margin-bottom: 120px;
+}
+
+.header-navbar .navbar {
+	background-color: #000;
+}
+
+.azaan-table {
+	width: 60%;
+	margin: 0 auto;
+	table-layout: fixed;
+}
+
+.azaan-table thead{
+    color: #fff;
+    background-color: #111155;
+}
+
+.azaan-table tbody{
+    color: #000;
+    font-weight: bold;
+    background-color: #FCFAE8;
+}
+
+.azaan-table tbody tr:nth-child(even){
+    color: #000;
+    background-color: #F0E68C;
+}
+.table,
+.table thead>tr>th {
+	text-align: center;
+}
+
+.add-block-wrapper {
+    width: 65%;
+    margin: 0 auto;
+    background-color: #fff !important;
+}
+
+.panel {
+    margin-bottom: 15px !important;
+}
+/* .panel-body {
+	background-color: #F9F9F9;
+} */
+
+.azaan-table tr {
+    height: 100px;
+}
+
+.azaan-table tbody>tr:hover {
+	color: #000;
+    background-color: #19be9d;
+}
+
+.azaan-table tbody td {
+	line-height: 5.428571 !important;
+}
+
+.update-timings-view {
+    background-color: #563d7c;
+}
+
+.panel-update-block {
+	background-color: #F9F9F9;
+}
+
+.well.update-timings-container {
+    width: 35%;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.well.update-timings-container.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group h4 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.well.update-timings-container input {
+	border-radius: 0;
+    padding: 25px;
+}
+
+.well.update-timings-container button {
+    border-radius: 0;
+}
+
+.input-group-btn .btn, .uib-timepicker button {
+	height: 52px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+pre,
+.btn,
+.alert,
+.edit-timings-view .panel {
+	border-radius: 0;
+}
+
+.action-btns span{
+	margin: 0 15px;
+}
+
+div.select-prayer-hall {
+	width: 30%;
+    padding: 25px 0;
+}
+
+div.select-prayer-hall .input-group {
+	height: 50px;
+}
+
+div.select-prayer-hall .form-control {
+	height: 50px;
+}
+
+div.prayer-hall-dropdown {
+	margin-right: 0;
+    padding: 0;
+}
+
+div.prayer-hall-dropdown .form-control{
+    border-radius: 0;
+}
+
+.default-option,
+.masjid-option {
+	padding: 20px;
+}
+
+div#accordion {
+	clear: both;
+}
+
+div#accordion .table th {
+	color: #fff;
+    background-color: #089de3;
+}
+
+div#accordion .table tbody tr:nth-child(even) {
+    background-color: #edeeec;
+}
+
+div#accordion .table tbody tr:last-child {
+	border-bottom: 1px solid #edeeec;
+}
+
+div#accordion a {
+    text-decoration: none;
+}
+
+.accordion-anchor:hover {
+	text-decoration: none !important;
+}
+
+.accordion-toggle i:before {
+	content: "\2212";
+}
+
+.accordion-toggle.collapsed i:before {
+    content: "\002b";
+}
+
+div#add-block {
+    background-color: #F9F9F9;
+}
+
+#add-block section {
+    width: 100%;
+    clear: both;
+    margin: 0 auto;
+}
+
+#add-block article {
+    width: 48%;
+    padding: 0 25px;
+    display: inline-block;
+}
+
+#add-block .table {
+    margin-top: 65px;
+}
+
+#add-block .table tbody tr {
+    text-align: center;
+}
+
+#add-block .action-btns-main-wrapper {
+    width: 25%;
+    padding: 35px 0;
+    margin: 20px auto;
+}
+
+#add-block .table-prayer-hall-details tbody tr{
+	text-align: left !important;
+}
+
+/* #add-block section {
+	width: 60%;
+	clear: both;
+	margin: 0 auto;
+} */
+
+/* #add-block article {
+    width: 45%;
+} */
+
+/* #add-block .table {
+    margin-top: 65px;
+} */
+
+#add-block .list-group {
+    width: 100%;
+}
+
+#add-block .form-control {
+	border-radius:0;
+}
+
+#add-block pre {
+    clear: both;
+    padding-top: 25px;
+}
+
+#add-block .action-btns-main article {
+	padding: 25px 0;
+}
+
+.edit-prayer-hall-details .action-btns {
+	clear: both;
+}
+
+.edit-timings-view .panel-heading{
+    height: 75px;
+}
+
+.edit-timings-view .panel-title>a {
+	line-height: 2.5;
+    font-size: x-large;
+}
+
+.edit-timings-view .panel-title>a>i {
+    padding: 0 25px;
+}
+
+.edit-timings-view .panel-title>a>span {
+    position: relative;
+    bottom: 2px;
+}
+
+#pageAlert {
+    position: fixed; 
+    top: 75px;
+    width: 33%; 
+    left: 33%;
+    margin: 0;
+    z-index: 1500;
+    padding: 20px;
+    font-family: arial; 
+    font-weight: bold;
+    word-wrap: break-word;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+}
+
+#pageAlert .alert-danger,
+#pageAlert .alert-error { 
+	border-color: #cb7784; 
+}
+
+#pageAlert .content {
+	text-align: center;
+}
+
+/**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
  */

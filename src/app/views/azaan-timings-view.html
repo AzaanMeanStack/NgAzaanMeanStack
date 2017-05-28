@@ -1,0 +1,16 @@
+<div class="azaan-table-container">
+    <table class="table azaan-table">
+        <thead>
+            <tr>
+                <th>Salah</th>
+                <th>Iqama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="c in contact.prayer">
+                <td>{{c.salah}}</td>
+                <td>{{c.iqama | date:'h:mm a'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,60 @@
+  <!-- Edit Masjid Details Panel -->
+<div class="panel panel-default edit-prayer-hall-details" ng-if="option._id != 'DEFAULT'">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle accordion-anchor collapsed" data-toggle="collapse" onclick="return false;" data-parent="#accordion" href="#panel4">
+            <i class="glyphicon"></i>
+            <span>Edit Masjid Details</span>
+        </a>
+       </h4>
+    </div>
+    <div id="panel4" class="panel-collapse collapse">
+      <div class="panel-body">
+        <section>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Masjid/Organization</th>
+                  <th>Contact Person</th>
+                  <th>Contact Number</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{contact.orgName}}</td>
+                  <td>{{contact.contactPerson}}</td>
+                  <td>{{contact.contactNumber}}</td>
+                  <td class="action-btns" ng-init="isEditActive=false">
+                    <a href="#" ng-click="isEditActive = !isEditActive" onclick="return false;">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+        <section ng-show="isEditActive">
+          <div class="pull-left">
+            <div class="list-group">
+              <h3>Edit Masjid Information</h3>
+              <hr />
+              <label>Name:</label>
+              <input class="form-control" type="text" ng-model="contact.orgName" id="lg" placeholder="Name of the Masjid or Organization">
+              <br />
+              <label>Contact Person:</label>
+              <input class="form-control" type="text" ng-model="contact.contactPerson" name="conta" id="lg" placeholder="Contact Person">
+              <br />
+              <label>Contact Number:</label>
+              <input class="form-control" type="number" ng-model="contact.contactNumber" name="author" id="lg" placeholder="Contact Number">
+              <br />
+            </div>
+          </div>
+          <div class="action-btns">
+            <button class="btn btn-primary" ng-click="edit(item._id); " onclick="return false;">Update</button>
+            <button class="btn btn-default">Cancel</button>
+          </div>
+        </section>
+      </div>
+    </div>
+</div>

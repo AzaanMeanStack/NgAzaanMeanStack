@@ -1,0 +1,56 @@
+<!-- Edit Prayer Times Panel -->
+<div class="panel panel-default" ng-if="option._id != 'DEFAULT'">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle accordion-anchor collapsed" data-toggle="collapse" onclick="return false;" data-parent="#accordion" href="#panel5">
+            <i class="glyphicon"></i>
+            <span>Edit Prayer Times</span>
+         </a>
+       </h4>
+    </div>
+    <div id="panel5" class="panel-collapse collapse">
+      <div class="panel-body panel-update-block">
+        <table class="table" ng-show="isEditTab">
+          <thead>
+            <tr>
+              <th>Salah</th>
+              <th>Iqama</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="prayer in contact.prayer">
+              <td>{{prayer.salah}}</td>
+              <td>{{prayer.iqama | date:'h:mm a'}}</td>
+              <td class="action-btns">
+                <a href="#" id="editBtn" ng-click="editPrayer(prayer.id)" onclick="return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                <span>|</span>
+                <a href="#" id="deleteBtn" ng-click="deleteItem(prayer.id, 'PRAYER')" onclick="return false;"><i class="glyphicon glyphicon-trash"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="well update-timings-container" ng-show="isUpdateTab">
+          <div class="form-group">
+            <h4>Update Daily Prayer Times</h4>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Salah</label>
+            <input class="form-control" ng-model="prayerToEdit.salah" />
+          </div>
+          <div class="form-group">
+            <label class="control-label">Iqama</label>
+            <input type="text" class="form-control time-picker" size="8" ng-model="prayerToEdit.iqama" name="time" bs-timepicker>
+          </div>
+          <div class="form-group">
+            <pre class="alert alert-info">{{ prayerToEdit.salah ? prayerToEdit.salah  + ' salah is at:' : '' }} {{ prayerToEdit.iqama ? prayerToEdit.iqama : '' | date:'h:mm a' }}</pre>
+          </div>
+          <div class="form-group">
+            <pre>Last Updated On: {{ prayerToEdit.lastUpdated ? prayerToEdit.lastUpdated : 'N/A' | date:"MM/dd/yyyy 'at' h:mm a" }}</pre>
+          </div>
+          <button class="btn btn-info" ng-click="updatePrayer(prayerToEdit.id)">Update</button>
+          <button class="btn btn-default" ng-click="deselect()">Cancel</button>
+        </div>
+      </div>
+    </div>
+</div>

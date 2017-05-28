@@ -1,0 +1,39 @@
+<!-- Manage Masjids Panel -->
+  <div class="panel panel-default edit-prayer-hall-details" ng-if="option._id == 'DEFAULT'">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle accordion-anchor collapsed" data-toggle="collapse" onclick="return false;" data-parent="#accordion" href="#panel8">
+            <i class="glyphicon"></i>
+            <span>Manage Masjids</span>
+        </a>
+       </h4>
+    </div>
+    <div id="panel8" class="panel-collapse collapse">
+      <div class="panel-body">
+        <section>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Masjid/Organization</th>
+                  <th>Contact Person</th>
+                  <th>Contact Number</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="record in contactlist">
+                  <td>{{record.orgName}}</td>
+                  <td>{{record.contactPerson}}</td>
+                  <td>{{record.contactNumber}}</td>
+                  <td class="action-btns" ng-init="isEditActive=false">
+                    <a href="#" ng-click="deleteOrganization(record._id)" onclick="return false;">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+      </div>
+    </div>
+  </div>

@@ -15,10 +15,12 @@
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
     "angular": "~1.5.3",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.3.7"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.3"
+    "angular-mocks": "~1.5.3",
+    "angular-bootstrap": "^2.5.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -29,6 +31,16 @@
         "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.svg"
       ]
     }
   },

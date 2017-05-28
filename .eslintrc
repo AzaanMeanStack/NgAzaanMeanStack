@@ -6,8 +6,14 @@
     "jasmine": true
   },
   "globals": {
+    "$": true,
+    "_": true,
     "angular": true,
     "module": true,
-    "inject": true
+    "inject": true,
+    "moment": true
+  },
+  "rules": {
+    "no-unused-vars": [1, {"vars": "local", "args": "none"}] // default: [2, {"vars": "all", "args": "after-used"}]
   }
 }

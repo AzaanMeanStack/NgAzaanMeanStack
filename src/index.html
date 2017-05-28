@@ -18,13 +18,20 @@
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" > -->
+
+
   </head>
-  <body>
+  <body class="{{ viewClass ? viewClass : ''}}" ng-controller="MainController">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
+    <div ng-include="'app/header.html'" class="header-navbar"></div>
+    <div ng-include="'app/templates.html'" class="header-navbar"></div>
+    <div class="container-fluid container-main">
+        <div class="dashboard-view" ui-view></div>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -41,6 +48,7 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
   </body>
 </html>

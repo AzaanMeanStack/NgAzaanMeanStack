@@ -1,0 +1,56 @@
+<!-- Edit Announcements Panel -->
+<div class="panel panel-default" ng-if="option._id != 'DEFAULT'">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+          <a class="accordion-toggle accordion-anchor collapsed" data-toggle="collapse" onclick="return false;" data-parent="#accordion" href="#panel7">
+            <i class="glyphicon"></i>
+            <span>Edit Announcements</span>
+          </a>
+      </h4>
+    </div>
+    <div id="panel7" class="panel-collapse collapse">
+      <div class="panel-body">
+        <section>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Announcement</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="announcement in contact.announcements">
+                  <td>{{announcement.date | date:'MM/dd/yyyy'}}</td>
+                  <td>{{announcement.notes}}</td>
+                  <td class="action-btns">
+                    <a href="#" ng-click="editAnnouncement(announcement.id)" onclick="return false;">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a> | 
+                    <a href="#" ng-click="deleteItem(announcement.id, 'ANNOUNCEMENT')" onclick="return false;">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+        <section>
+              <article class="pull-left">
+                <div class="list-group">
+                  <h3> Edit Announcements</h3>
+                  <hr />
+                  <label>Date:</label>
+                  <input class="form-control" type="text" ng-model="announcementObj.date" bs-datepicker/>
+                  <br />
+                  <label>Announcement:</label>
+                  <textarea type="text" class="form-control" size="8" ng-model="announcementObj.notes"></textarea>
+                  <br />
+                  <button class="btn btn-primary" ng-click="updateAnnouncement()">Update</button>
+                  <br />
+                </div>
+              </article>
+         </section>
+      </div>
+    </div>
+</div>

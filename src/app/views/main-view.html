@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Salah</th>
+            <th>Iqama</th>
+            <th>Action</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <tr ng-repeat="contact in contactlist">
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
